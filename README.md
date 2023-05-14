@@ -7,3 +7,4 @@
  ```
 dotnet run name-sorter.cs ./name-of-file.txt
  ```
+### files written to ./sorted-names-list.txt
