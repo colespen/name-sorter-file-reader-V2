@@ -22,23 +22,22 @@ namespace NameSorter
 
     public class Program
     {
-        //          Main(string[] args)
-        static void Main()
+        static void Main(string[] args)
         {
-            //if (args.Length < 1)
-            //{
-            //    Console.WriteLine("Usage: name-sorter <filename>");
-            //    return;
-            //}
-            //var path = args[0];
-            var path = "./unsorted-names-list.txt";
+            if (args.Length < 2)
+            {
+                Console.WriteLine("\nPlease enter filename argument to run program.\n");
+                Console.WriteLine("Correct usage: name-sorter ./name-of-file.txt\n");
+                return;
+            }
+            var path = args[1];
             var fileReader = new FileReader();
             var nameSorter = new NameSorter();
             var fileWriter = new FileWriter();
             var sortedNames = nameSorter.SortByLastName(fileReader.ReadFile(path));
             PrintSortedNames(sortedNames);
             fileWriter.WriteToFile("./sorted-names-list.txt", sortedNames);
-            System.Threading.Thread.Sleep(1500);
+            System.Threading.Thread.Sleep(500);
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
