@@ -5,7 +5,7 @@
 
 ### please run this in the root directory to run the program:
  ```
-name-sorter ./name-of-file.txt
+dotnet run name-sorter.cs ./name-of-file.txt
  ```
 
 
