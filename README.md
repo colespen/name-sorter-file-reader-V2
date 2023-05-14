@@ -7,15 +7,3 @@
  ```
 dotnet run name-sorter.cs ./name-of-file.txt
  ```
-
-
-### to run tests
-```
-npm install
-```
-then run
-```
-npm test
-```
-
-Enjoy!
